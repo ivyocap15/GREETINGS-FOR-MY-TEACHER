@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, #ffffff 0, transparent 25%),
+        linear-gradient(135deg, #f9dfe7, #f7cbd8, #fcebef);
+    color: #4d3940;
+    overflow-x: hidden;
+}
+
+.background-decoration span {
+    position: fixed;
+    color: rgba(190, 93, 122, 0.25);
+    font-size: 30px;
+    animation: float 6s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.background-decoration span:nth-child(1) { left: 8%; top: 15%; }
+.background-decoration span:nth-child(2) { right: 10%; top: 20%; }
+.background-decoration span:nth-child(3) { left: 15%; bottom: 15%; }
+.background-decoration span:nth-child(4) { right: 20%; bottom: 18%; }
+.background-decoration span:nth-child(5) { left: 50%; top: 8%; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.card-container {
+    width: min(1100px, 92%);
+    min-height: 650px;
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(100, 55, 70, 0.20);
+    overflow: hidden;
+    background: #f8dfe5;
+}
+
+.card-page {
+    width: 50%;
+    padding: 55px;
+    position: relative;
+}
+
+.left-page {
+    background: linear-gradient(135deg, #f7cbd8, #f9dce4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-frame {
+    width: 290px;
+    padding: 12px;
+    background: white;
+    box-shadow: 0 12px 30px rgba(90, 45, 60, 0.18);
+    transform: rotate(-2deg);
+    transition: transform 0.4s ease;
+}
+
+.photo-frame:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.photo-frame img {
+    width: 100%;
+    display: block;
+}
+
+.teacher-name {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.teacher-name h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #8e3f5c;
+}
+
+.teacher-name p {
+    margin-top: 5px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #9d6678;
+}
+
+.flower-decoration {
+    margin-top: 20px;
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+
+.heart {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    font-size: 45px;
+    color: #b65d78;
+}
+
+.book-binding {
+    width: 5px;
+    background: linear-gradient(to bottom, #d98ba2, #b95f7c, #d98ba2);
+    box-shadow: 0 0 10px rgba(120, 55, 80, 0.15);
+}
+
+.right-page {
+    background: #fffaf8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-heart {
+    color: #b65d78;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #a26a7c;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #49353c;
+}
+
+h1 span {
+    color: #b34f72;
+    font-style: italic;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    margin: 25px 0;
+    background: #d989a1;
+}
+
+.message {
+    max-width: 450px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #5d4a51;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin: 18px 0;
+    color: #b65d78;
+    font-size: 20px;
+}
+
+.closing {
+    font-size: 14px;
+    color: #80636c;
+}
+
+.signature {
+    margin-top: 8px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #a94f70;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #b65d78;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 7px 15px rgba(182, 93, 120, 0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #984963;
+}
+
+footer {
+    position: fixed;
+    bottom: 15px;
+    font-size: 12px;
+    color: #8e596a;
+}
+
+@media (max-width: 800px) {
+    .card-container {
+        flex-direction: column;
+        margin: 30px 0;
+        width: 90%;
+    }
+
+    .card-page {
+        width: 100%;
+        padding: 40px 25px;
+    }
+
+    .book-binding {
+        width: 100%;
+        height: 5px;
+    }
+
+    .photo-frame {
+        width: 240px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    footer {
+        position: static;
+        margin: 10px;
+    }
+}
